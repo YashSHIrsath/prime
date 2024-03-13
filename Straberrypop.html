@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="buypagehtml.css">
+    <title>Prime-Product</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="PRIME"> <img src="IMAGES/Prime-Logo_115x.avif" alt=""> </div>
+    <nav>
+        <ul>
+            <a style="text-decoration: none;" href="index.html"><li>HOME </li></a>
+            <a style="text-decoration: none;" href="products.html"><li>SHOP</li></a>
+            <a style="text-decoration: none;" href="#end"><li>ABOUT</li></a>
+            <a style="text-decoration: none;" href="#end"><li>CONTACT US</li></a>
+            <a style="text-decoration: none;" href="signin.html"><li>SIGN IN</li></a>
+          </ul>
+    </nav>
+
+    <div class="product-area">
+        <div class="product-image">
+            <img class="images" src="IMAGES/product-image/pop/swsticksfront_700x.webp" alt="">
+            <img class="images" src="IMAGES/product-image/pop/Prime_HydrationStick_combo_StrawberryWatermelon_0000_700x.webp" alt="">
+            <img class="images" src="IMAGES/product-image/pop/Prime_HydrationStick_combo_StrawberryWatermelon_0000_700x.webp" alt="">
+        </div>
+        <div class="product-info">
+            <h1 class="name" style="background-image: -webkit-linear-gradient(60deg,#cd1add, rgb(11, 11, 0));-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Strawberry Watermelon</h1>
+            <p class="subscript">Popsicle</p>
+            <p class="price"> <span class="prices">90 </span>₹ / $ <span class="prices2">1.99</span></p>            <div class="counter">
+                <p class="icon" onclick="incrementQuantity()" style="border-right: 1px solid white;">+</p>
+                <p class="quantity">1</p>
+                <p class="icon icon2" onclick="decrementQuantity()" style="border-left: 1px solid white;">-</p>
+            </div>
+            <div class="buy" style="background: linear-gradient(45deg,#af46b8, rgb(11, 11, 0));">
+                <p>ADD TO CART</p>
+            </div>
+            <div class="properties">
+                <p class="prop-elements">Zero added sugar​</p>
+                <p class="prop-elements">25 Calories​</p>
+                <p class="prop-elements">10% Coconut Water</p>
+                <p class="prop-elements">BCAAs + B Vitamins</p>
+                <p class="prop-elements">Antioxidants + Electrolytes</p>
+                <p class="prop-elements">Caffeine-Free</p>
+            </div>
+            <div class="properties-images">
+                <img src="IMAGES/properties/PR-icon-1-Coconut_76.webp" alt="">
+                <img src="IMAGES/properties/PR-icon-2-Caffeine_73.webp" alt="">
+                <img src="IMAGES/properties/PR-icon-3-Electrolytes_61.webp" alt="">
+                <img src="IMAGES/properties/PR-icon-4-BVitamins_21.webp" alt="">
+                <img src="IMAGES/properties/PR-icon-5-Antioxidants_6.webp" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="end" id="end">
+            <div class="info">
+            <h3 style="color: rgb(233, 233, 51)">About Prime</h3>
+            <p>PRIME was developed to fill the void where great taste meets function. With bold, thirst-quenching flavors to help you refresh, replenish, and refuel, PRIME is the perfect boost for any endeavor. We're confident you'll love it as much as we do.</p>
+            </div>
+            <div class="drinks info">
+                <a href="">Hydration</a>
+                <a href="">Sticks</a>
+                <a href="">Hydration + Sticks</a>
+            </div>
+            <div class="aboutus info">
+            <a href="">About US</a>
+            <a href="">Creators</a>
+            <a href="">FAQs</a>
+            <a href="">Know More</a>
+            </div>
+    
+            
+        </div>
+        <h1 class="visit">  ☺ VISIT AGAIN ☺</h1>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Get all image elements and store them in an array
+          const images = document.querySelectorAll(".images");
+          
+          let currentIndex = 0;
+      
+          function showImage(index) {
+            // Hide all images
+            images.forEach(image => image.style.opacity = 0);
+      
+            // Show the current image
+            images[index].style.opacity = 1;
+          }
+      
+          function cycleImages() {
+            // Increment index and reset to 0 if it exceeds the number of images
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+          }
+      
+          // Initial display
+          showImage(currentIndex);
+      
+          // Set an interval to cycle images every 3 seconds (adjust as needed)
+          setInterval(cycleImages, 2000);
+        });
+
+        function incrementQuantity() {
+        var quantityElement = document.querySelector('.quantity');
+        var currentQuantity = parseInt(quantityElement.textContent);
+        quantityElement.textContent = currentQuantity + 1;
+        var price = document.querySelector(".prices");
+        price.textContent= 90*(currentQuantity+1) + " ";
+        var price = document.querySelector(".prices2");
+        price.textContent= 1.99*(currentQuantity+1) + " ";
+
+    }
+
+    function decrementQuantity() {
+        var quantityElement = document.querySelector('.quantity');
+        var currentQuantity = parseInt(quantityElement.textContent);
+        if (currentQuantity > 1) {
+            quantityElement.textContent = currentQuantity - 1;
+            var price = document.querySelector(".prices");
+            price.textContent= 90*(currentQuantity-1) + " ";
+            var price = document.querySelector(".prices2");
+            price.textContent= 1.99*(currentQuantity-1) + " ";
+        }
+    }
+
+      </script>
+</body>
+
+
+
+</html>
