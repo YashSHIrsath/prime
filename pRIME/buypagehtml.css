@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    color: white;
+    scroll-behavior: smooth;
+    
+
+}
+body{
+    background-color: #151617;
+}
+
+.PRIME{
+    color: red;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+nav ul a li{
+    padding: 10px 20px;
+    transition: all 350ms ease-in-out;
+    margin: 0px 3px;
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
+nav ul a li:hover{
+    background-color: #fff;  
+    color: #151617;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+   
+}
+nav ul li a{
+    color: rgb(206, 187, 187);
+    text-decoration: none;
+    font-weight: 800;
+}
+
+/*PRODUCT*/
+
+.product-area{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: start;
+    margin-top: 50px;
+}
+
+.product-image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.product-image img{
+    width: 32%;
+    padding: 40px 30px;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    background: linear-gradient(217deg, rgba(255, 255, 255, 0.384), rgba(42, 42, 42, 0.306) 70.71%);
+    position: absolute;
+}
+.product-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 100px;
+}
+.name{
+    font-family: "Titillium Web", sans-serif;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    
+    text-shadow: 2px 2px 1px rgba(240, 236, 236, 0.622);
+}
+.subscript{
+    color: #ffffff6e;
+    margin-top: 5px;
+}
+.price{
+    color: rgb(233, 233, 51);
+    margin-top: 20px;
+    font-size: 20px;
+}
+.counter{
+    display: flex;
+    border: 1px solid white;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.icon{
+    padding: 10px;
+    cursor: pointer;
+}
+.quantity{
+    padding: 10px 20px;
+}
+.buy{
+    padding: 10px 60px;
+    background: linear-gradient(217deg, rgba(255, 255, 255, 0.384), rgba(42, 42, 42, 0.306) 70.71%);
+    border-top-left-radius : 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 5px 8px 10px rgb(56, 66, 69);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    transition: 0.2s;
+}
+.buy:active{
+    background-color: #fff;
+    transform: scale(0.95);
+}
+.buy:active p{
+    color: #151617;
+}
+.buy p{
+    color: #fff;
+}
+.properties{
+    margin-top: 20px;
+}
+.prop-elements{
+    font-family: "Titillium Web", sans-serif;
+    padding: 5px 0px;
+}
+.properties-images{
+    margin-top: 20px;
+}
+
+.properties-images img{
+    width: 3rem;
+}
+
+footer{
+    background-color:#25282a;
+    margin-top: 20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+}
+
+.end{
+    display: flex;
+    background-color: black;
+}
+.info{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.info a{
+    color: white;
+    text-decoration: none;
+}
+
+.drinks{
+    align-items: flex-end;
+}
+.aboutus{
+    align-items: flex-end;
+}
+.info p{
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.visit{
+    background-color: black;
+    opacity: 1;
+    margin: 0;
+    font-size: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+}
